@@ -1,0 +1,13 @@
+[
+    {
+        "conversationId": 1,
+        "partecipantsId": [ 1, 3 ],
+        "history": [
+            {
+                "senderId": 1,
+                "body": "ciao, come va ?",
+                "timestamp": "2024-11-13T08:01:00Z"
+            }
+        ]
+    }
+]

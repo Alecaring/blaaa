@@ -7,12 +7,10 @@
 
 :root {
     --header: #e0e0e0;
-    --shadow-light: #ffffff;
+    --shadow-light: #e1e1e1;
     --shadow-dark: #a3a3a3;
-    --menu-bg-color: #e0e0e0;
-    --shadow-light: #ffffff;
-    --shadow-dark: #a3a3a3;
-    
+    --menu-bg-color: #e0e0e0; 
+    --shadow-lighter: #e6e6e6;
 }
 
 a {

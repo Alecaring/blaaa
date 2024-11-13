@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "image": "/user1.webp",
+        "author": "John Doe",
+        "timestamp": "2024-11-13T08:00:00Z",
+        "message": {
+            "timestamp": "dateNow",
+            "body": "corpo del messaggio",
+            "status": "sent",
+            "destinationId": "1"
+            
+        }
+    },
+    {
+        "id": 2,
+        "image": "./user2.jpg",
+        "author": "Jane Smith",
+        "timestamp": "2024-11-13T08:01:00Z",
+        "message": {
+            "timestamp": "dateNow",
+            "body": "corpo del messaggio",
+            "status": "sent",
+            "destinationId": "1"
+        }
+    },
+    {
+        "id": 3,
+        "image": "./user3.jpg",
+        "author": "John Doe",
+        "timestamp": "2024-11-13T08:02:30Z",
+        "message": {
+            "timestamp": "dateNow",
+            "body": "corpo del messaggio",
+            "status": "sent",
+            "destinationId": "1"
+        }
+    },
+    {
+        "id": 4,
+        "image": "./user4.webp",
+        "author": "Jane Smith",
+        "timestamp": "2024-11-13T08:03:45Z",
+        "message": {
+            "timestamp": "dateNow",
+            "body": "corpo del messaggio",
+            "status": "sent",
+            "destinationId": "1"
+        }
+    },
+    {
+        "id": 5,
+        "image": "./user5.webp",
+        "author": "John Doe",
+        "timestamp": "2024-11-13T08:05:00Z",
+        "message": {
+            "timestamp": "dateNow",
+            "body": "corpo del messaggio",
+            "status": "sent",
+            "destinationId": "1"
+        }
+    }
+]
