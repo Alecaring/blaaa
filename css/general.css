@@ -6,10 +6,23 @@
 }
 
 :root {
-    --red: rgb(77, 228, 132);
+    --header: #e0e0e0;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3a3a3;
+    --menu-bg-color: #e0e0e0;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3a3a3;
+    
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+main {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    z-index: -1;
 }

@@ -1,0 +1,6 @@
+.chatContainer {
+    width: 100%;
+    /* debug */
+    height: 60vh;
+    background-color: green;
+}
