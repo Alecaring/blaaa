@@ -22,7 +22,7 @@
     text-align: center;
     display: none;
 }
-fieldset {
+.containerMainLogin > fieldset {
     width: 80%;
     border-radius: 1rem;
     border-color: rgba(45, 45, 45, 0.31);
@@ -32,7 +32,7 @@ fieldset {
 
 }
 
-legend {
+.containerMainLogin > fieldset > legend {
     font-weight: 100;
     letter-spacing: 1px;
     padding: .4rem;
@@ -48,7 +48,7 @@ input:focus {
     outline: none;
 }
 
-button {
+.containerMainLogin > button {
     margin: 1rem .5rem .5rem;
     border-radius: 2rem;
     padding: .6rem 1rem;

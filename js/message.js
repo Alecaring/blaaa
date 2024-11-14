@@ -1,4 +1,47 @@
+import { fetchData, getChats, getPosts, getUsers } from "../../context/context.js";
+
 const contacts = document.getElementById('contacts');
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await fetchData();
+
+    const users = getUsers();
+    const posts = getPosts();
+    const chats = getChats();
+
+    console.log(users);
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let contact;
 function loadMessage() {

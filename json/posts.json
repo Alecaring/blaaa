@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "content": "Ciao a tutti",
+        "image": "./",
+        "reactions": {
+            "like": 0,
+            "love": 0
+        },
+        "comments": [
+            {
+                "user_id": 2,
+                "text": "benvenuto!"
+            }
+        ]
+    }
+]
