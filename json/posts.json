@@ -2,16 +2,200 @@
     {
         "id": 1,
         "user_id": 1,
-        "content": "Ciao a tutti",
-        "image": "./",
+        "content": "Ciao a tutti, sono nuovo qui! 😊",
+        "image": "post1.webp",
         "reactions": {
-            "like": 0,
-            "love": 0
+            "like": 3,
+            "love": 5
         },
         "comments": [
             {
                 "user_id": 2,
-                "text": "benvenuto!"
+                "text": "Benvenuto!"
+            },
+            {
+                "user_id": 3,
+                "text": "Ciao! Felice di conoscerti! 😊"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "content": "Qualcuno ha consigli per un viaggio a Parigi?",
+        "image": "post2.webp",
+        "reactions": {
+            "like": 8,
+            "love": 10
+        },
+        "comments": [
+            {
+                "user_id": 1,
+                "text": "Visita il Louvre e passeggia lungo la Senna!"
+            },
+            {
+                "user_id": 4,
+                "text": "Non dimenticare di provare i croissant! 🥐"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "user_id": 3,
+        "content": "Oggi ho iniziato a imparare a programmare. 💻",
+        "image": "post3.webp",
+        "reactions": {
+            "like": 15,
+            "love": 20
+        },
+        "comments": [
+            {
+                "user_id": 1,
+                "text": "Grande! Quale linguaggio stai imparando?"
+            },
+            {
+                "user_id": 5,
+                "text": "Se hai bisogno di aiuto, fammi sapere!"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "user_id": 4,
+        "content": "Guardate che panorama! 😍",
+        "image": "post4.jpg",
+        "reactions": {
+            "like": 25,
+            "love": 30
+        },
+        "comments": [
+            {
+                "user_id": 3,
+                "text": "Wow, incredibile! Dove sei?"
+            },
+            {
+                "user_id": 2,
+                "text": "Bellissimo! Voglio andare anche io."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "user_id": 5,
+        "content": "Qualcuno vuole unirsi per una partita a calcetto stasera?",
+        "image": "post5.jpg",
+        "reactions": {
+            "like": 12,
+            "love": 7
+        },
+        "comments": [
+            {
+                "user_id": 4,
+                "text": "Io ci sono! A che ora?"
+            },
+            {
+                "user_id": 1,
+                "text": "Peccato, non posso venire stasera!"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "user_id": 1,
+        "content": "Sto leggendo un libro fantastico: 'Il potere di adesso'. 📚",
+        "image": "post6.webp",
+        "reactions": {
+            "like": 18,
+            "love": 10
+        },
+        "comments": [
+            {
+                "user_id": 2,
+                "text": "L'ho letto anche io, davvero illuminante!"
+            },
+            {
+                "user_id": 5,
+                "text": "Lo aggiungo alla mia lista!"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "user_id": 3,
+        "content": "Che giornata produttiva oggi! 🚀",
+        "image": "post7.jpg",
+        "reactions": {
+            "like": 22,
+            "love": 15
+        },
+        "comments": [
+            {
+                "user_id": 1,
+                "text": "Bravo! Continua così!"
+            },
+            {
+                "user_id": 4,
+                "text": "Qual è il tuo segreto? 😂"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "user_id": 4,
+        "content": "Ecco una foto del mio gatto, non è adorabile? 🐱",
+        "image": "post8.jpg",
+        "reactions": {
+            "like": 40,
+            "love": 50
+        },
+        "comments": [
+            {
+                "user_id": 3,
+                "text": "Adorabile! Come si chiama?"
+            },
+            {
+                "user_id": 2,
+                "text": "Voglio coccolarlo subito!"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "user_id": 5,
+        "content": "Consigli per iniziare a fare jogging? 🏃",
+        "image": "post9.jpg",
+        "reactions": {
+            "like": 10,
+            "love": 5
+        },
+        "comments": [
+            {
+                "user_id": 4,
+                "text": "Inizia con piccoli passi e ascolta il tuo corpo."
+            },
+            {
+                "user_id": 1,
+                "text": "Scarpe comode sono fondamentali!"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "user_id": 2,
+        "content": "Finalmente ho completato il mio progetto! 🎉",
+        "image": "post10.jpg",
+        "reactions": {
+            "like": 30,
+            "love": 25
+        },
+        "comments": [
+            {
+                "user_id": 3,
+                "text": "Complimenti! Non vedo l'ora di vederlo."
+            },
+            {
+                "user_id": 5,
+                "text": "Ottimo lavoro! 🎉"
             }
         ]
     }

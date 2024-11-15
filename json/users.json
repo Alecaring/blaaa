@@ -3,18 +3,55 @@
         "id": 1,
         "first_name": "Alessio",
         "last_name": "Rossi",
-        "profile_image_path": "./"
+        "username": "alessio_24",
+        "active": false,
+        "profile_image_path": "./user1.webp",
+        "email": "monaco1@icloud.com",
+        "password": "WebDeveloper123",
+        "timestamp": "2024-11-13T08:02:30Z"
     },
     {
-        "id": 1,
+        "id": 2,
         "first_name": "Mario",
         "last_name": "Verdi",
-        "profile_image_path": "./"
+        "username": "mario_24",
+        "active": true,
+        "profile_image_path": "./user2.jpg",
+        "email": "monaco2@icloud.com",
+        "password": "WebDeveloper123",
+        "timestamp": "2024-11-13T08:02:30Z"
     },
     {
-        "id": 1,
+        "id": 3,
         "first_name": "Luigi",
         "last_name": "Marrone",
-        "profile_image_path": "./"
+        "username": "luigi_24",
+        "active": true,
+        "profile_image_path": "./user3.jpg",
+        "email": "monaco3@icloud.com",
+        "password": "WebDeveloper123",
+        "timestamp": "2024-11-13T08:02:30Z"
+    },
+    {
+        "id": 4,
+        "first_name": "Anna",
+        "last_name": "Grigio",
+        "username": "anna_24",
+        "active": false,
+        "profile_image_path": "./user4.webp",
+        "email": "monaco3@icloud.com",
+        "password": "WebDeveloper123",
+        "timestamp": "2024-11-13T08:02:30Z"
+    },
+    {
+        "id": 5,
+        "first_name": "Alberto",
+        "last_name": "Giallo",
+        "username": "alberto_24",
+        "active": true,
+        "profile_image_path": "./user5.webp",
+        "email": "monaco5@icloud.com",
+        "password": "WebDeveloper123",
+        "timestamp": "2024-11-13T08:02:30Z"
     }
 ]
