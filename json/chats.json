@@ -1,15 +1,152 @@
 [
     {
         "id": 1,
-        "partecipants": [
-            1,
-            2
-        ],
+        "partecipants": [1, 2],
         "history": [
             {
                 "sender_id": 1,
-                "text": "ciao, come va ?",
-                "timestamp": "2024-11-13 10.02"
+                "text": "Ciao! Hai visto la riunione di ieri?",
+                "timestamp": "2024-11-13 08:30"
+            },
+            {
+                "sender_id": 2,
+                "text": "Sì, molto interessante. Hai già iniziato a lavorare al progetto?",
+                "timestamp": "2024-11-13 08:32"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sto raccogliendo le idee, ma dobbiamo allinearci sui requisiti.",
+                "timestamp": "2024-11-13 08:35"
+            },
+            {
+                "sender_id": 2,
+                "text": "Perfetto, magari possiamo fare una call dopo pranzo.",
+                "timestamp": "2024-11-13 08:37"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "partecipants": [3, 4],
+        "history": [
+            {
+                "sender_id": 3,
+                "text": "Hai completato il report per il cliente?",
+                "timestamp": "2024-11-13 09:15"
+            },
+            {
+                "sender_id": 4,
+                "text": "Sì, ma devo rivedere la sezione delle statistiche.",
+                "timestamp": "2024-11-13 09:18"
+            },
+            {
+                "sender_id": 3,
+                "text": "Ok, mandamelo appena puoi. Il cliente vuole una bozza entro oggi.",
+                "timestamp": "2024-11-13 09:20"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "partecipants": [1, 2, 5],
+        "groupName": "Team Progetto X",
+        "group_image": "https://img.freepik.com/foto-premium/una-papera-di-gomma-gialla-e-su-uno-sfondo-nero_899894-11646.jpg",
+        "history": [
+            {
+                "sender_id": 1,
+                "text": "Buongiorno! Possiamo aggiornare i task del progetto?",
+                "timestamp": "2024-11-13 10:00"
+            },
+            {
+                "sender_id": 5,
+                "text": "Certo! Io ho finito la parte di design.",
+                "timestamp": "2024-11-13 10:05"
+            },
+            {
+                "sender_id": 2,
+                "text": "Ottimo, io ho iniziato la documentazione tecnica.",
+                "timestamp": "2024-11-13 10:10"
+            },
+            {
+                "sender_id": 1,
+                "text": "Perfetto, direi che siamo in linea con le scadenze.",
+                "timestamp": "2024-11-13 10:12"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "partecipants": [2, 3, 4],
+        "groupName": "Discussione Marketing",
+        "history": [
+            {
+                "sender_id": 2,
+                "text": "Il cliente ci ha chiesto di proporre nuove idee per il marketing.",
+                "timestamp": "2024-11-13 11:00"
+            },
+            {
+                "sender_id": 3,
+                "text": "Pensavo a una campagna sui social. Potrebbe funzionare.",
+                "timestamp": "2024-11-13 11:05"
+            },
+            {
+                "sender_id": 4,
+                "text": "D'accordo! Io posso preparare un mockup per la grafica.",
+                "timestamp": "2024-11-13 11:10"
+            },
+            {
+                "sender_id": 2,
+                "text": "Fantastico, allora fissiamo una riunione per giovedì.",
+                "timestamp": "2024-11-13 11:12"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "partecipants": [1, 3, 4, 5],
+        "groupName": "Progetto Segreto",
+        "group_image": "https://img.pixers.pics/pho_wat(s3:700/FO/64/57/81/32/700_FO64578132_a43c7ab7abb424ae0e9d582ca72baa92.jpg,700,583,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,533,jpg)/poster-bella-fiore-viola-su-sfondo-nero-generato-dal-computer.jpg.jpg",
+        "history": [
+            {
+                "sender_id": 1,
+                "text": "Ragazzi, dobbiamo discutere il piano per il progetto segreto.",
+                "timestamp": "2024-11-13 12:00"
+            },
+            {
+                "sender_id": 3,
+                "text": "D'accordo. Ho alcune idee per la struttura generale.",
+                "timestamp": "2024-11-13 12:05"
+            },
+            {
+                "sender_id": 5,
+                "text": "Io posso occuparmi della parte tecnica.",
+                "timestamp": "2024-11-13 12:07"
+            },
+            {
+                "sender_id": 4,
+                "text": "Perfetto, possiamo dividere i compiti nella prossima call.",
+                "timestamp": "2024-11-13 12:10"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "partecipants": [3, 5],
+        "history": [
+            {
+                "sender_id": 3,
+                "text": "Hai ricevuto la mia email con i file allegati?",
+                "timestamp": "2024-11-13 13:00"
+            },
+            {
+                "sender_id": 5,
+                "text": "Sì, li sto analizzando. Ti aggiorno entro il pomeriggio.",
+                "timestamp": "2024-11-13 13:05"
+            },
+            {
+                "sender_id": 3,
+                "text": "Perfetto, fammi sapere se c'è qualcosa da correggere.",
+                "timestamp": "2024-11-13 13:07"
             }
         ]
     }

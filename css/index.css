@@ -9,13 +9,15 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    z-index: 9999; /* Assicurati che il loader sia sopra al contenuto */
-  }
-  
-  #content {
-    display: none; /* All'inizio, il contenuto è nascosto */
-  }
-  
+    z-index: 9999;
+    /* Assicurati che il loader sia sopra al contenuto */
+}
+
+#content {
+    display: none;
+    /* All'inizio, il contenuto è nascosto */
+}
+
 
 .navigationBar {
     position: fixed;
@@ -25,12 +27,13 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.444);
     backdrop-filter: blur(1px);
-      z-index: 1000;
+    z-index: 1000;
     border-radius: 4rem 4rem 0 0;
     display: flex;
     align-items: start;
     justify-content: center;
 }
+
 .navLink {
     width: 95%;
     padding: 1rem;
@@ -41,6 +44,7 @@
 
 
 }
+
 .navLink>ul {
     width: 100%;
     height: 100%;
@@ -50,8 +54,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    
+
 }
+
 .navLink>ul>li>a {
     width: 45px;
     height: 45px;
@@ -61,6 +66,7 @@
     justify-content: center;
     border-radius: 50%;
 }
+
 .navLink>ul>li>a>svg {
     background-color: transparent;
 }
@@ -69,9 +75,10 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    
+
     background-color: rgba(0, 128, 0, 0.32);
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -184,12 +191,13 @@ button>svg {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 1rem;
     margin-bottom: 15vh;
 }
 
 .card {
-    width: 95%;
+    width: calc(100% - 2rem);
     box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
     margin: 0 auto;
     border-radius: 1rem;
@@ -281,7 +289,7 @@ button>svg {
 .commentPost {
     width: 100%;
     padding: 0 1rem 1rem;
-    
+
 
 }
 
@@ -292,4 +300,105 @@ button>svg {
     padding: 1rem;
     box-shadow: inset -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
 
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: calc(100% / 2 - 2rem);
+    }
+
+    .navLink {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0rem;
+        margin-bottom: 0rem;
+        backdrop-filter: blur(50px);
+        box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+    }
+
+    .navLink>ul>li {
+        width: calc(100% / 5);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (min-width: 1024px) {
+        .card {
+            width: 100%;
+        }
+
+        .navigationBar {
+            top: 0%;
+            width: 100%;
+            height: 10vh;
+            backdrop-filter: blur(0px);
+            background-color: transparent;
+            border-radius: 0rem;
+
+
+        }
+
+        .navLink {
+            padding: 0 5rem;
+            box-shadow: 0 0 0 0 transparent;
+            height: 100%;
+            border-radius: 0rem;
+            margin-bottom: 0rem;
+            backdrop-filter: blur(0px);
+
+
+        }
+
+        #content {
+            margin-top: 10vh;
+
+
+        }
+
+        .circleSpan {
+            width: 80px;
+            height: 80px;
+            margin: 0 .8rem;
+        }
+
+        .stories {
+
+            padding: 1rem 5rem 2rem;
+        }
+
+        .post {
+            padding: 0 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 115fr);
+
+        }
+
+        .navbar {
+            padding: 0 5rem;
+        }
+
+        .navLink>ul {
+            display: none;
+
+        }
+
+        .navLink>ul>li>a {
+            display: none;
+        }
+
+        .navLink>ul>li>a>svg {
+            display: none;
+        }
+
+        .navLink>ul>li>a:active {
+            display: none;
+        }
+
+        .logoImg {
+            width: 200px;
+        }
+
+    }
 }

@@ -13,18 +13,12 @@
     --menu-bg-color: #e0e0e0; 
     --shadow-lighter: #e6e6e6;
 }
-#app {
-    position: relative;
-}
+
 a {
     text-decoration: none;
     color: inherit;
 }
-a {
-    all: unset; /* Rimuove tutti gli stili di default */
-    text-decoration: none;
-    color: inherit;
-  }
+
   
 img {
     width: 100%;
