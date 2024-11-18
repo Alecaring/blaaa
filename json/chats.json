@@ -26,6 +26,32 @@
         ]
     },
     {
+        "id": 1,
+        "partecipants": [1, 3],
+        "history": [
+            {
+                "sender_id": 1,
+                "text": "Ciao! Hai visto la riunione di ieri?",
+                "timestamp": "2024-11-13 08:30"
+            },
+            {
+                "sender_id": 2,
+                "text": "Sì, molto interessante. Hai già iniziato a lavorare al progetto?",
+                "timestamp": "2024-11-13 08:32"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sto raccogliendo le idee, ma dobbiamo allinearci sui requisiti.",
+                "timestamp": "2024-11-13 08:35"
+            },
+            {
+                "sender_id": 2,
+                "text": "Perfetto, magari possiamo fare una call dopo pranzo.",
+                "timestamp": "2024-11-13 08:37"
+            }
+        ]
+    },
+    {
         "id": 2,
         "partecipants": [3, 4],
         "history": [

@@ -168,6 +168,9 @@ button>svg {
     border-radius: 50%;
 }
 
+.unridedStory {
+    border: 3px solid rgba(250, 100, 200, 70%);
+}
 .online {
     position: absolute;
     bottom: 0%;
