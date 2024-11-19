@@ -22,20 +22,65 @@
                 "sender_id": 2,
                 "text": "Perfetto, magari possiamo fare una call dopo pranzo.",
                 "timestamp": "2024-11-13 08:37"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sì, penso che sarebbe utile. Ma abbiamo bisogno di definire alcune cose prima.",
+                "timestamp": "2024-11-13 08:40"
+            },
+            {
+                "sender_id": 2,
+                "text": "Certo, sono d'accordo. Dobbiamo capire meglio i requisiti prima di andare avanti.",
+                "timestamp": "2024-11-13 08:42"
+            },
+            {
+                "sender_id": 1,
+                "text": "Esattamente, dobbiamo anche assicurarci che tutti i membri del team siano allineati.",
+                "timestamp": "2024-11-13 08:45"
+            },
+            {
+                "sender_id": 2,
+                "text": "Sì, è fondamentale. A proposito, hai parlato con Marco della documentazione?",
+                "timestamp": "2024-11-13 08:47"
+            },
+            {
+                "sender_id": 1,
+                "text": "Non ancora, ma ho intenzione di farlo più tardi. Penso che dovremmo aggiornarla insieme.",
+                "timestamp": "2024-11-13 08:50"
+            },
+            {
+                "sender_id": 2,
+                "text": "Va bene. Mi sembra che stiamo procedendo nella giusta direzione.",
+                "timestamp": "2024-11-13 08:52"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sì, sono d'accordo. Ci sono però alcune questioni di dettagli che dobbiamo risolvere prima di andare avanti.",
+                "timestamp": "2024-11-13 08:55"
+            },
+            {
+                "sender_id": 2,
+                "text": "Assolutamente. Per ora, facciamo una pausa e riprendiamo dopo pranzo?",
+                "timestamp": "2024-11-13 08:57"
+            },
+            {
+                "sender_id": 1,
+                "text": "Ok, perfetto. A dopo!",
+                "timestamp": "2024-11-13 09:00"
             }
         ]
     },
     {
-        "id": 1,
+        "id": 2,
         "partecipants": [1, 3],
         "history": [
             {
                 "sender_id": 1,
-                "text": "Ciao! Hai visto la riunione di ieri?",
+                "text": "Ciao! Hai visto la riunione di oggi?",
                 "timestamp": "2024-11-13 08:30"
             },
             {
-                "sender_id": 2,
+                "sender_id": 3,
                 "text": "Sì, molto interessante. Hai già iniziato a lavorare al progetto?",
                 "timestamp": "2024-11-13 08:32"
             },
@@ -45,12 +90,58 @@
                 "timestamp": "2024-11-13 08:35"
             },
             {
-                "sender_id": 2,
+                "sender_id": 3,
                 "text": "Perfetto, magari possiamo fare una call dopo pranzo.",
                 "timestamp": "2024-11-13 08:37"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sì, penso che sarebbe utile. Ma dobbiamo definire alcune cose prima.",
+                "timestamp": "2024-11-13 08:40"
+            },
+            {
+                "sender_id": 3,
+                "text": "Certo, sono d'accordo. Dobbiamo capire meglio i requisiti prima di andare avanti.",
+                "timestamp": "2024-11-13 08:42"
+            },
+            {
+                "sender_id": 1,
+                "text": "Esattamente, dobbiamo anche assicurarci che tutti i membri del team siano allineati.",
+                "timestamp": "2024-11-13 08:45"
+            },
+            {
+                "sender_id": 3,
+                "text": "Sì, è fondamentale. A proposito, hai parlato con Marco della documentazione?",
+                "timestamp": "2024-11-13 08:47"
+            },
+            {
+                "sender_id": 1,
+                "text": "Non ancora, ma ho intenzione di farlo più tardi. Penso che dovremmo aggiornarla insieme.",
+                "timestamp": "2024-11-13 08:50"
+            },
+            {
+                "sender_id": 3,
+                "text": "Va bene. Mi sembra che stiamo procedendo nella giusta direzione.",
+                "timestamp": "2024-11-13 08:52"
+            },
+            {
+                "sender_id": 1,
+                "text": "Sì, sono d'accordo. Ci sono però alcune questioni di dettagli che dobbiamo risolvere prima di andare avanti.",
+                "timestamp": "2024-11-13 08:55"
+            },
+            {
+                "sender_id": 3,
+                "text": "Assolutamente. Per ora, facciamo una pausa e riprendiamo dopo pranzo?",
+                "timestamp": "2024-11-13 08:57"
+            },
+            {
+                "sender_id": 1,
+                "text": "Ok, perfetto. A dopo!",
+                "timestamp": "2024-11-13 09:00"
             }
         ]
     },
+    
     {
         "id": 2,
         "partecipants": [3, 4],

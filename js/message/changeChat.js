@@ -9,7 +9,7 @@ export function changeChat( messages, username ) {
 
     // update title
     const chatHeader = document.getElementById('chatHeader');
-    chatHeader.innerText = `Chat con ${username}`;
+    chatHeader.innerText = `${username}`;
 
     // Show messages
     messages.forEach(message => {

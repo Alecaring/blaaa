@@ -1,40 +1,272 @@
+/* Chat Container */
 .chatContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-}
-.chatContainer > .ulContacts {
-    list-style-type: none;
-    padding: .5rem;
-    margin: 0;
-    border-radius: 0 0 1rem 1rem;
-}
-.ulContacts > .listContacts {
-    padding: 1.5rem 1rem;
-    margin: 0.6rem .5rem;
-    border-radius: 0.5rem;
-    box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    height: 100vh;
     display: flex;
-    align-items: center;
 }
 
-.listContacts > .imageContacts {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
+/* Chat Contacts Section */
+.chatContact {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+}
+
+.circleChat {
+    position: relative;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    opacity: .8;
-    box-shadow: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    box-shadow: -7px -5px 18px #c7c7c7, 4px 4px 8px rgb(159 159 159);
+    border: 3px solid rgb(225, 95, 225);
 }
-.listContacts > .contCenter {
-    padding-left: 1rem;
+
+.circleChat > img {
+    border-radius: 50%;
 }
-.listContacts > .contCenter > h2 {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+
+.activeChat {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: rgb(46, 162, 46);
+    border-radius: 50%;
+}
+
+.numUnreadMessage {
+    background-color: rgb(46, 162, 46);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.chatLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.txtContentChat {
     font-weight: 300;
-    padding: .5rem;
+    letter-spacing: -0.5px;
+    display: block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
 }
-.listContacts > .contCenter > p {
-    font-size: .8rem;
-    letter-spacing: 1px;
-    font-weight: 100;
+
+.nameChat {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Chat Messages Section */
+.chatMessage {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.chatDisplay {
+    width: 100%;
+    height: 100%;
+}
+
+.headerChat {
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+}
+
+.bodyChat {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.areaTxt {
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+}
+
+.title {
+    background-color: transparent;
+    padding: 0 2rem;
+}
+
+/* Message Styles */
+.senderCol, .receiverCol {
+    width: 75%;
+    padding: 1rem 3rem;
+    background-color: transparent;
+}
+
+.senderCol {
+    float: left;
+}
+
+.receiverCol {
+    float: right;
+}
+
+.senderCloud {
+    position: relative;
+    background-color: #9a9a9a;
+    border-radius: 1rem 1rem 1rem 0;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.senderCloud::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(270deg);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #9a9a9a;
+}
+
+.receiverCloud {
+    position: relative;
+    background-color: rgb(39, 166, 39);
+    border-radius: 1rem 1rem 0 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.receiverCloud::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(270deg);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgb(39, 166, 39);
+}
+
+.txtSender, .txtReceiver {
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.txtSender {
+    float: right;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .chatContainer {
+        flex-direction: column;
+    }
+
+    .chatContact {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        transition: .5s ease-in-out;
+    }
+
+    #backChat {
+        border: none;
+        margin-left: 1.5rem;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
+
+
+    }
+    #backChat>svg {
+        background-color: white;
+    }
+
+    .chatMessage {
+        position: fixed;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease-in-out;
+        z-index: 9999;
+    }
+
+    .circleChat {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nameChat {
+        font-size: 1rem;
+    }
+
+    .txtContentChat {
+        width: 200px;
+    }
+
+    .senderCol, .receiverCol {
+        width: 90%;
+        padding: 0.5rem 1rem;
+    }
+
+    .senderCloud, .receiverCloud {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .headerChat {
+        height: 12%;
+        font-size: 0.9rem;
+    }
+
+    .areaTxt {
+        height: 12%;
+    }
 }

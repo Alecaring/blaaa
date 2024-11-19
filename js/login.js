@@ -1,32 +1,22 @@
-import { fetchData, getUsers } from "../../context/contextData.js";
+import { login } from '../auth/auth.js';
 
-const emailElem = document.getElementById('email');
-const passwordElem = document.getElementById('password');
-const loginBtn = document.getElementById('loginBtn');
+console.log('%cQuesto è un messaggio contiene istruzioni per sviluppatori !', 'color: red; font-size: 16px; font-weight: bold;');
 
-loginBtn.addEventListener('click', async () => {
-    await fetchData(); // Carica i dati
-    const usersData = getUsers(); // Ottieni gli utenti caricati
+const loginForm = document.getElementById('login-form');
+const errorMessage = document.getElementById('error-message');
 
-    const userEmail = emailElem.value.trim();
-    const userPassword = passwordElem.value.trim();
+loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    let userFound = false;
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-    for (const user of usersData) {
-        if (user.email === userEmail && user.password === userPassword) {
-            localStorage.setItem('IDENTIFICATOR', 'tokenTemporaneo')
-            userFound = true;
-
-            // if (localStorage.getItem('IDENTIFICATOR')) {
-                window.location.href = "index.html";
-            // }
-
-            break;
-        }
-    }
-
-    if (!userFound) {
-        alert('Credenziali non valide. Riprova.');
-    }
+    if (await login(username, password)) {
+        window.location.href = 'index.html';
+    } else {
+        console.log(login());
+        errorMessage.style.padding = '1rem 2rem';
+        errorMessage.style.border = ".1px solid red"
+        errorMessage.textContent = 'Username o Password non corretti';
+    };
 });

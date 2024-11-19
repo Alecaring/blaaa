@@ -3,12 +3,22 @@ import { createElement } from "./common/createElement.js";
 import { createCardContact } from './message/chatContacts.js';
 import { createChatMessages } from "./message/chatMessages.js";
 import { changeChat } from "./message/changeChat.js";
+import { loader } from "./common/loader.js";
+
 
 console.log('%cQuesto è un messaggio contiene istruzioni per sviluppatori !', 'color: red; font-size: 16px; font-weight: bold;');
 
-const chatContact = document.getElementById('chatContact');
+window.onload = function () {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+};
 
 async function displayChat() {
+    const navigationBars = document.getElementById('navigationBar');
+    console.log(navigationBars);
+
+    const chatContact = document.getElementById('chatContact');
+
     await fetchData();
 
     const chats = getChats();
@@ -30,8 +40,11 @@ async function displayChat() {
 
         if(chat.partecipants.length === 2) {
             const sender = users.find(user => user.id === chat.partecipants.find(s => s === userObj.id));
+
             const receiverId = chat.partecipants.filter(id => id !== userObj.id)[0];
+
             // console.log(receiverId);
+
             const receiver = users.find(user => user.id === receiverId);
             return {
                 ...chat,
@@ -55,53 +68,121 @@ async function displayChat() {
         };
 
     });
+
     // console.log(mergedChats);
 
     for (let i = 0; i < mergedChats.length; i++) {
-        
         const s = mergedChats[i];
         console.log(s);
         
         const receiverId = s.partecipants.find(id => id !== userObj.id);
         const receiverUser = users.find(user => user.id === receiverId);
-
-        // if chat is one to one
-        if (s.partecipants.length === 2) {
+        
+        let isAnimating = false; // Variabile per evitare clic multipli durante l'animazione
+        
+        // Funzione di gestione della media query e delle animazioni
+        const handleChatViewToggle = (isChatOpen, chatMessages, chatContacts, backChat) => {
+            // Evita di attivare la funzione se è in corso un'animazione
+            if (isAnimating) return;
     
+            isAnimating = true; // Imposta il flag di animazione a true
+    
+            const mediaQuery = window.matchMedia("(max-width: 768px)");
+    
+            if (mediaQuery.matches) {
+                if (isChatOpen) {
+                    chatMessages.forEach(chatMessage => {
+                        chatMessage.style.left = "0";
+                        chatMessage.style.zIndex = "99999";
+                    });
+        
+                    chatContacts.forEach(chatContact => {
+                        chatContact.style.left = '-30%';
+                    });
+                    navigationBars.style.bottom = "-15%";
+                } else {
+                    chatMessages.forEach(chatMessage => {
+                        chatMessage.style.left = "100%";
+                        chatMessage.style.zIndex = "0";
+                    });
+        
+                    chatContacts.forEach(chatContact => {
+                        chatContact.style.left = '0'; // Mostra i contatti
+                    });
+                    navigationBars.style.bottom = "0";
+                }
+            }
+    
+            // Gestione del pulsante di ritorno
+            if (backChat) {
+                backChat.removeEventListener('click', backChatClickHandler); //rm vecchio listener
+                backChat.addEventListener('click', backChatClickHandler); //add nuovo listener
+        
+                function backChatClickHandler() {
+                    handleChatViewToggle(false, chatMessages, chatContacts, backChat); // Ripristinare la vista dei contatti
+                }
+            }
+    
+            // Dopo che l'animazione è finita, ripristina il flag
+            setTimeout(() => {
+                isAnimating = false;
+            }, 300);
+        };
+    
+        // Se la chat è uno a uno
+        if (s.partecipants.length === 2) {
             const chat = createCardContact(
                 `./assets/${receiverUser.profile_image_path}`,
                 `${receiverUser.first_name} ${receiverUser.last_name}`, 
-                `${s.history[s.history.length -1].text}`, 
+                `${s.history[s.history.length - 1].text}`, 
                 "1"
-            )
+            );
             chatContact.append(chat);
-            
-            // Aggiungi un event listener per cambiare la chat
+    
+            // Crea la chat di uno a uno
             chat.addEventListener('click', () => {
                 console.log(`Chat con ${receiverUser.username} cliccata`);
+    
+                const chatMessages = document.querySelectorAll('.chatMessage');
+                const chatContacts = document.querySelectorAll('.chatContact');
+                const backChat = document.getElementById('backChat');
+    
+                handleChatViewToggle(true, chatMessages, chatContacts, backChat); // Mostra la chat
+    
+                // Cambia la chat (supponendo che 'changeChat' esista)
                 changeChat(s.history, receiverUser.username);
             });
         }
     
-        // if chat is group
+        // Se la chat è di gruppo
         if (s.partecipants.length > 2) {
-
             const chat = createCardContact(
-                `./assets/${s.group_image}`,
+                `${s.group_image}`,
                 `${s.groupName}`, 
-                `${s.history[s.history.length -1].text}`,
+                `${s.history[s.history.length - 1].text}`,
                 "1"
-            )
-            chatContact.append(chat);                
-
+            );
+            chatContact.append(chat);
+    
+            // Crea la chat di gruppo
             chat.addEventListener('click', () => {
                 console.log('Chat di gruppo cliccata');
-                changeChat(s.history, 'Gruppo');
+    
+                const chatMessages = document.querySelectorAll('.chatMessage');
+                const chatContacts = document.querySelectorAll('.chatContact');
+                const backChat = document.getElementById('backChat');
+    
+                handleChatViewToggle(true, chatMessages, chatContacts, backChat); // Mostra la chat
+    
+                // Cambia la chat (supponendo che 'changeChat' esista)
+                changeChat(s.history, s.groupName);
             });
-            
         }
     }
+    
+    
 }
+
 
 
 displayChat();

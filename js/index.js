@@ -4,6 +4,8 @@ import { createStories } from "./index/createStories.js";
 import { createPost } from "./index/createPost.js";
 import { loader } from "./common/loader.js";
 
+console.log('%cQuesto è un messaggio contiene istruzioni per sviluppatori !', 'color: red; font-size: 16px; font-weight: bold;');
+
 loader();
 
 const nameElem = document.getElementById('name');
@@ -58,14 +60,13 @@ async function posts() {
     const posts = getPosts();
 
     const enrichedPosts = posts.map(post => {
-        const user = users.find(user => user.id === post.user_id);
+        const user = mappedUsers.find(user => user.id === post.user_id);
         return {
             ...post,
             user: user || null,
         };
     });
-
-    console.log(enrichedPosts);
+   
 
     for (let i = 0; i < enrichedPosts.length; i++) {
         const post = enrichedPosts[i];

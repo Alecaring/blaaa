@@ -15,7 +15,7 @@ export async function login(username, password) {
     );
 
     if (user) {
-        localStorage.setItem('isLoggedIn', 'true'); // Salva come stringa
+        localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
         localStorage.setItem('userObj', JSON.stringify({
             id: user.id,
