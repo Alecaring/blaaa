@@ -206,47 +206,26 @@
 }
 
 .senderCol {
-    float: left;
+    float: right;
 }
 
 .receiverCol {
-    float: right;
+    float: left;
 }
 
 .senderCloud {
     position: relative;
-    background-color: #9a9a9a;
-    border-radius: 1rem 1rem 1rem 0;
+    background-color: rgb(39, 166, 39);
+    border-radius: 1rem 1rem 0 1rem;
+
     display: inline-block;
     padding: 1rem 2rem;
     font-weight: 500;
     letter-spacing: -.5px;
+    float: right;
 }
 
 .senderCloud::after {
-    content: '';
-    position: absolute;
-    left: -5px;
-    bottom: -5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    transform: rotate(270deg);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #9a9a9a;
-}
-
-.receiverCloud {
-    position: relative;
-    background-color: rgb(39, 166, 39);
-    border-radius: 1rem 1rem 0 1rem;
-    display: inline-block;
-    padding: 1rem 2rem;
-    font-weight: 500;
-    letter-spacing: -.5px;
-}
-
-.receiverCloud::after {
     content: '';
     position: absolute;
     right: -5px;
@@ -257,6 +236,30 @@
     transform: rotate(270deg);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent rgb(39, 166, 39);
+}
+
+.receiverCloud {
+    position: relative;
+    background-color: #9a9a9a;
+    border-radius: 1rem 1rem 1rem 0;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    float: left;
+}
+
+.receiverCloud::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(270deg);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #9a9a9a;
 }
 
 .txtSender, .txtReceiver {

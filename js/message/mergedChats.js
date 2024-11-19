@@ -6,8 +6,10 @@ export function getMergedChats(filteredChat, users, userObj) {
 
         if(chat.partecipants.length === 2) {
             const sender = users.find(user => user.id === chat.partecipants.find(s => s === userObj.id));
-
+            console.log(sender);
+            
             const receiverId = chat.partecipants.filter(id => id !== userObj.id)[0];
+            console.log(receiverId);
 
             // console.log(receiverId);
 
