@@ -24,39 +24,38 @@
         <main>
             <div class="chatContainer" id="contacts">
 
-                <div class="chatContact" id="chatContact">
+                <!-- conatiner contacts -->
+                <div class="chatContact" id="chatContact"></div>
 
-
-                </div>
+                <!-- conatiner messages -->
                 <div class="chatMessage" id="chatMessage">
-                    <div class="headerChat">
+
+                    <!-- header inner chat container -->
+                    <header class="headerChat">
                         <button id="backChat">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
                               </svg>
                         </button>
                         <h2 id="chatHeader" class="title">Seleziona una chat</h2>
-                    </div>
+                    </header>
+
+                    <!-- body messages -->
                     <div class="bodyChat" id="bodyChat">
 
+                        <div id="chatContainer"></div>
 
-
-
-
-                        <div id="chatContainer">
-
-                        </div>
-
-                        <div id="chatHeader">
-
-                        </div>
-
-
-
-
+                        <div id="chatHeader"></div>
 
                     </div>
-                    <div class="areaTxt"></div>
+
+                    <!-- div where input to add -->
+                    <div class="areaTxt">
+                        <input type="text" aria-label="message" id="message" placeholder="message ...">
+                        <button id="send">
+                            <img style="width: 15px; height: 15px; background-color: inherit;" src="./assets/svg/bi-send-fill.svg" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>

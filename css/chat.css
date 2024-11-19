@@ -1,12 +1,11 @@
 /* Chat Container */
 .chatContainer {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
 }
 
@@ -93,6 +92,54 @@
     background-color: aqua;
 }
 
+/* Animazione per l'entrata della chat */
+.animateIn {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Animazione per l'uscita della chat */
+.animateOut {
+    animation: slideOut 0.5s ease-in forwards;
+}
+
+/* Animazione che muove gli elementi da destra a sinistra */
+@keyframes slideIn {
+    from {
+        left: 100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Animazione che muove gli elementi da sinistra a destra */
+@keyframes slideOut {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+#backButton {
+    display: none; /* Il bottone è nascosto inizialmente */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 100;
+}
+
 .chatDisplay {
     width: 100%;
     height: 100%;
@@ -116,8 +163,34 @@
 .areaTxt {
     width: 100%;
     height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #fff;
+    padding: 0 1.5rem;
     box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+}
+#message {
+    width: 80%;
+    height: 50%;
+    border-radius: 2rem;
+    border: none;
+    background-color: inherit;
+    padding: 0 1rem;
+    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+}
+#message:focus {
+    outline: none;
+}
+
+
+#send {
+    width: 50px;
+    height: 40px;
+    background-color: rgb(74, 190, 74);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
 }
 
 .title {
@@ -200,7 +273,10 @@
 @media (max-width: 768px) {
     .chatContainer {
         flex-direction: column;
+        height: 100vh;
+        bottom: 0;
     }
+    
 
     .chatContact {
         position: fixed;
