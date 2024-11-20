@@ -1,0 +1,74 @@
+/* Chat Contacts Section */
+.chatContact {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: .1px solid grey;
+}
+
+.chat {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .1px solid grey;
+}
+
+.circleChat {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: -7px -5px 18px #c7c7c7, 4px 4px 8px rgb(159 159 159);
+    border: 3px solid rgb(225, 95, 225);
+}
+
+.circleChat > img {
+    border-radius: 50%;
+}
+
+.activeChat {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: rgb(46, 162, 46);
+    border-radius: 50%;
+}
+
+.numUnreadMessage {
+    background-color: rgb(46, 162, 46);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.chatLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.txtContentChat {
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    display: block;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: gray;
+}
+
+.nameChat {
+    font-size: 1.2rem;
+    font-weight: 500;
+}

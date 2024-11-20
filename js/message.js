@@ -21,7 +21,7 @@ async function displayChat() {
 
     let activeChatId = null; // Variabile per tracciare la chat attiva
 
-    backChat.style.display = 'none'; // Nascondi il bottone indietro inizialmente
+    backChat.style.display = 'none';
 
     const userObj = userDataLocalStorage();
     const { filteredChats, users } = await fetchAndFilterChats(userObj.id);
@@ -44,7 +44,15 @@ async function displayChat() {
 
         chat.addEventListener('click', () => {
             activeChatId = chatData.id; // Imposta la chat attiva
-            backChat.style.display = 'block';
+
+            const mediaQuery = window.matchMedia("(max-width: 768px)");
+            if (mediaQuery.matches) {
+                backChat.style.display = 'block';
+            } else {
+
+                backChat.style.display = 'none';
+            }
+
 
             handleChatAnimations(true, document.querySelectorAll('.chatMessage'), document.querySelectorAll('.chatContact'), navigationBars);
 

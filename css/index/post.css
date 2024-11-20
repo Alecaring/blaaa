@@ -1,0 +1,117 @@
+/* post */
+
+.post {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 15vh;
+}
+
+.card {
+    width: calc(100% - 2rem);
+    box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.headerCard {
+    padding: .7rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contCircle {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.circlePostUser {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: red;
+    overflow: hidden;
+    box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
+}
+
+.card>img {
+    position: relative;
+    height: 40vh;
+}
+
+.containerInfoLike {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem .5rem;
+}
+
+.like-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.like-group>span:nth-child(4) {
+    margin-bottom: .1rem;
+    padding-left: .5rem;
+}
+
+.like-group>span:nth-child(6) {
+    margin-bottom: .2rem;
+    margin-left: .2rem;
+}
+
+.bubleLike {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    margin: -7px;
+    border: .1px solid rgb(108, 108, 108);
+    overflow: hidden;
+    margin-bottom: .1rem;
+    box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
+
+
+}
+
+.text-group {
+    padding: 0 .5rem .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .9rem;
+    font-weight: 300;
+    letter-spacing: -.5px;
+}
+
+.usernamePost {
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.commentPost {
+    width: 100%;
+    padding: 0 1rem 1rem;
+
+
+}
+
+.commentPost>input {
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: inset -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
+
+}
+

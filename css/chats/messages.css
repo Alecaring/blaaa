@@ -1,88 +1,3 @@
-/* Chat Container */
-.chatContainer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-}
-
-/* Chat Contacts Section */
-.chatContact {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat {
-    width: 100%;
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
-}
-
-.circleChat {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: -7px -5px 18px #c7c7c7, 4px 4px 8px rgb(159 159 159);
-    border: 3px solid rgb(225, 95, 225);
-}
-
-.circleChat > img {
-    border-radius: 50%;
-}
-
-.activeChat {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 15px;
-    height: 15px;
-    display: block;
-    background-color: rgb(46, 162, 46);
-    border-radius: 50%;
-}
-
-.numUnreadMessage {
-    background-color: rgb(46, 162, 46);
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.chatLeft {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.txtContentChat {
-    font-weight: 300;
-    letter-spacing: -0.5px;
-    display: block;
-    width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: gray;
-}
-
-.nameChat {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 /* Chat Messages Section */
 .chatMessage {
     display: flex;
@@ -92,17 +7,14 @@
     background-color: aqua;
 }
 
-/* Animazione per l'entrata della chat */
 .animateIn {
     animation: slideIn 0.5s ease-out forwards;
 }
 
-/* Animazione per l'uscita della chat */
 .animateOut {
     animation: slideOut 0.5s ease-in forwards;
 }
 
-/* Animazione che muove gli elementi da destra a sinistra */
 @keyframes slideIn {
     from {
         left: 100%;
@@ -114,7 +26,6 @@
     }
 }
 
-/* Animazione che muove gli elementi da sinistra a destra */
 @keyframes slideOut {
     from {
         left: 0;
@@ -128,7 +39,7 @@
 
 #backButton {
     display: none; /* Il bottone è nascosto inizialmente */
-    position: absolute;
+    /* position: absolute;
     top: 10px;
     left: 10px;
     background-color: #007bff;
@@ -137,7 +48,7 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 100;
+    z-index: 100; */
 }
 
 .chatDisplay {
@@ -151,7 +62,7 @@
     background-color: #fff;
     display: flex;
     align-items: center;
-    box-shadow: inset -3px -1px 8px var(--shadow-dark), inset 4px 4px 8px var(--shadow-light);
+    border-bottom: .1px solid grey;
 }
 
 .bodyChat {
@@ -182,7 +93,6 @@
 #message:focus {
     outline: none;
 }
-
 
 #send {
     width: 50px;
@@ -270,82 +180,4 @@
 
 .txtSender {
     float: right;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .chatContainer {
-        flex-direction: column;
-        height: 100vh;
-        bottom: 0;
-    }
-    
-
-    .chatContact {
-        position: fixed;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-        transition: .5s ease-in-out;
-    }
-
-    #backChat {
-        border: none;
-        margin-left: 1.5rem;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        box-shadow: -3px -1px 8px var(--shadow-dark), 4px 4px 8px var(--shadow-light);
-
-
-    }
-    #backChat>svg {
-        background-color: white;
-    }
-
-    .chatMessage {
-        position: fixed;
-        left: 100%;
-        width: 100%;
-        height: 100%;
-        transition: .5s ease-in-out;
-        z-index: 9999;
-    }
-
-    .circleChat {
-        width: 50px;
-        height: 50px;
-    }
-
-    .nameChat {
-        font-size: 1rem;
-    }
-
-    .txtContentChat {
-        width: 200px;
-    }
-
-    .senderCol, .receiverCol {
-        width: 90%;
-        padding: 0.5rem 1rem;
-    }
-
-    .senderCloud, .receiverCloud {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    .headerChat {
-        height: 12%;
-        font-size: 0.9rem;
-    }
-
-    .areaTxt {
-        height: 12%;
-    }
 }

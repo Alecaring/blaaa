@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+
     <!-- styles -->
+    <!-- Base/general styles -->
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/chat.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- Common components -->
+    <link rel="stylesheet" href="./css/common/loader.css">
+    <link rel="stylesheet" href="./css/common/navbar.css">
+    <link rel="stylesheet" href="./css/common/media.css">
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="./css/chats/general.css">
+    <link rel="stylesheet" href="./css/chats/contacts.css">
+    <link rel="stylesheet" href="./css/chats/messages.css">
+    <link rel="stylesheet" href="./css/chats/media.css">
+
 
 </head>
 
@@ -33,9 +42,11 @@
                     <!-- header inner chat container -->
                     <header class="headerChat">
                         <button id="backChat">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>
                         </button>
                         <h2 id="chatHeader" class="title">Seleziona una chat</h2>
                     </header>
@@ -53,7 +64,8 @@
                     <div class="areaTxt">
                         <input type="text" aria-label="message" id="message" placeholder="message ...">
                         <button id="send">
-                            <img style="width: 15px; height: 15px; background-color: inherit;" src="./assets/svg/bi-send-fill.svg" alt="">
+                            <img style="width: 15px; height: 15px; background-color: inherit;"
+                                src="./assets/svg/bi-send-fill.svg" alt="">
                         </button>
                     </div>
                 </div>

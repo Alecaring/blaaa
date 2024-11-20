@@ -1,0 +1,50 @@
+/* index -> navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
+}
+
+.title-name {
+    padding-left: 1rem;
+    font-weight: 500;
+    letter-spacing: -.5px;
+}
+
+.search {
+    padding: .5rem 1.6rem 1rem;
+}
+
+#btnMenu {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    box-shadow: -3px -1px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+    border-radius: 1rem;
+    color: gray;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnMenu>svg {
+    margin-top: .2rem;
+}
